@@ -10,7 +10,7 @@ This project automates the process of **extracting, processing, and visualizing 
 - **Automation:** Fully automated using Airflow DAG scheduled daily.
 
 ## Project Structure
-
+```bash
 MyRepo/
 ├─ dags/
 │  └─ daily_total_revenue_analysis.py   # Airflow DAG file
@@ -21,7 +21,7 @@ MyRepo/
 │  └─ Total_Revenue_Visualization.png
 │
 └─ README.md
-
+```
 
 ## Prerequisites
 
