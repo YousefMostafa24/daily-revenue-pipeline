@@ -1,1 +1,49 @@
-# daily-revenue-pipeline
+# Daily Revenue Analysis with Airflow
+
+This project automates the process of **extracting, processing, and visualizing daily sales revenue** using **Apache Airflow**, **Python**, **Pandas**, and **Matplotlib**. It connects to a PostgreSQL database, computes daily revenue, and generates visualizations for easy business insights.
+
+## Features
+
+- **Data Extraction:** Fetch sales orders and product details from PostgreSQL.
+- **Data Processing:** Calculate total daily revenue.
+- **Visualization:** Generate line charts to track revenue trends.
+- **Automation:** Fully automated using Airflow DAG scheduled daily.
+
+## Project Structure
+MyRepo/
+│
+├─ dags/
+│ └─ daily_total_revenue_analysis.py # Airflow DAG
+├─ airflow_output/ # Output files
+│ ├─ fetch_sales_data.csv
+│ ├─ daily_revenue.csv
+│ └─ Total_Revenue_Visualization.png
+├─ README.md
+
+
+## Prerequisites
+
+- Python 3.8+
+- Apache Airflow
+- Pandas
+- Matplotlib
+- PostgreSQL (with connection configured in Airflow)
+
+## How to Run
+
+1. Place your DAG file in the Airflow `dags/` folder.
+2. Configure PostgreSQL connection in Airflow (`postgres_conn`).
+3. Start Airflow webserver and scheduler.
+4. The DAG `daily_total_revenue_analysis` will run automatically based on the schedule (`@daily`).
+5. Output files will be saved in `airflow_output/`.
+
+## Output
+
+- `fetch_sales_data.csv` → Raw order data.
+- `daily_revenue.csv` → Total revenue aggregated by date.
+- `Total_Revenue_Visualization.png` → Daily revenue line chart.
+
+## License
+
+This project is licensed under the MIT License.
+
